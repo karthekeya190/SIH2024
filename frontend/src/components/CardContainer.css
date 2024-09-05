@@ -1,0 +1,150 @@
+.card-container {
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+.card-details {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  margin: auto;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  height: 400px; /* Adjust based on your design */
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.863);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  
+}
+
+.card:hover {
+  transform: scale(1.1) rotate(-2deg); /* Increased scale for more noticeable zoom */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure smooth transition */
+}
+
+
+.card-image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.card-description {
+  font-size: 0.9em;
+  color: #666;
+  padding: 0 10px;
+}
+
+.card:nth-child(1) {
+  transform: translate(-290px, -170px);
+}
+
+.card:nth-child(2) {
+  transform: translate(290px, 170px);
+}
+
+.card:nth-child(3) {
+  transform: translate(290px, -180px);
+}
+
+.card:nth-child(4) {
+  transform: translate(-290px, 180px);
+}
+
+.card:nth-child(5) {
+  transform: translate(0, 0);
+}
+
+.center-card {
+  transform: scale(1.1);
+   z-index: 2;
+}
+
+.surrounding-card {
+  transform: scale(1);
+  z-index: 1;
+}
+
+.card-details {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.card-details.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.card-details h2 {
+  margin-top: 0;
+  font-family: 'Arial', sans-serif;
+  color: black;
+  font-size: 1.8em;
+}
+
+.card-details p {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  font-size: 1em;
+}
+
+.center-card-active {
+  transform: scale(1.2) rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+  z-index: 5;
+}
+
+.surrounding-card-slid {
+  opacity: 0.3;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
