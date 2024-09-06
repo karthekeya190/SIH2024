@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Homepage.css'; // Import the CSS file
 import CardContainer from './CardContainer'; // Import the CardContainer component
-
+import Categorization from './Categorization';
+import Footer from './Footer';
 const images = [
   { src: 'https://jaro-website.s3.ap-south-1.amazonaws.com/2024/06/What-is-Disaster-Management-Preparation-Cycles-Types-Early-Warnings.jpg', text: 'Disaster Management' },
   { src: 'https://cdn.prod.website-files.com/620d42e86cb8ec4d0839e59d/620d42e96cb8ecfbf639f665_gis-for-disaster-response-hero-image.png', text: 'Data Aggregation' },
@@ -42,13 +43,15 @@ const Homepage = () => {
           </div>
 
           {/* Downward Arrow for Scrolling */}
-          <div className="down-arrow" onClick={scrollToNextSection}>
-            &#8595; {/* Down arrow symbol */}
-          </div>
+          <div className="get-started-button" onClick={scrollToNextSection}>
+        Get Started
+      </div>
         </div>
       ) : (
-        <CardContainer /> // Render CardContainer when showCards is true
+        <Categorization /> // Render CardContainer when showCards is true
+        
       )}
+
     </div>
   );
 };

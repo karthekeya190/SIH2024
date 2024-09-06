@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CardContainer.css';
+import Dashboard from './Dashboard';
 
 const cardsData = [
   {
@@ -14,7 +15,7 @@ const cardsData = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s',
     title: 'Facebook',
     shortDescription: 'Source of information about disaster 2.',
-    detailedDescription: 'Detailed information about disaster 2 from Facebook.',
+    detailedDescription: 'Facebook has been playing a crucial role in disaster management by enabling rapid communication and coordination during emergencies. Its platform allows users to share real-time information, report missing persons, request aid, and connect with local organizations. Tools like Facebook Crisis Response feature, which includes Safety Check, helps users mark themselves safe during disasters. It also aids in crowdsourcing data for relief efforts, making it easier for governments, NGOs, and volunteers to respond effectively to natural disasters and emergencies.',
   },
   {
     id: 3,
@@ -76,6 +77,7 @@ const CardContainer = () => {
           ))}
         </div>
       )}
+   
     </div>
   );
 };
